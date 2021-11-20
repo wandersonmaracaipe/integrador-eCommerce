@@ -16,8 +16,9 @@ class SincronizarController extends Controller
         $this->produto_empresa = $produto_empresa;
     }
 
-    public function index()
+    public function sincroniza()
     {
+
         # Select na tabela produtos para buscar todos os produtos marcados para usar ecommerce
         $produtos = $this->produto->getProdutosMaxdata();
 

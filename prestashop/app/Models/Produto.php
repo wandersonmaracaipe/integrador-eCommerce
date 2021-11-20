@@ -9,6 +9,7 @@ use PrestaShopWebserviceException;
 
 class Produto extends Model
 {
+    # Table view por questões de segurança
     protected $table = 'v_produto';
     protected $primaryKey = 'proId';
     protected $guarded = [];
@@ -107,6 +108,38 @@ class Produto extends Model
 
         } catch (PrestaShopWebserviceException $ex) {
             echo 'Other error: <br />' . $ex->getMessage();
+        }
+    }
+
+    # Obtem a quantidade de produtos sincronizados com o prestashop
+    public function produtosPrestashopIds() {
+        try {
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
+
+            $xml = $webService->get([
+                'resource' => 'products',
+            ]);
+
+            return $xml->products->children();
+
+        } catch (PrestaShopWebserviceException $ex) {
+            echo 'Error: <br />' . $ex->getMessage();
+        }
+    }
+
+    # Obtem a quantidade de produtos sincronizados com o prestashop
+    public function vendasPrestashopIds() {
+        try {
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
+
+            $xml = $webService->get([
+                'resource' => 'orders',
+            ]);
+
+            return $xml->orders->children();
+
+        } catch (PrestaShopWebserviceException $ex) {
+            echo 'Error: <br />' . $ex->getMessage();
         }
     }
 }
