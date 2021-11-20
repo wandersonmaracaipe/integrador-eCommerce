@@ -30,7 +30,15 @@ class SincronizarController extends Controller
 
             # Se count() igual a zero, cadastra o produto
             if($pesquisaProduto->count() == 0){
-                $this->produto->sincronizarProdudo($produto);
+                # Envia o cadastro do produto para o prestashop
+                $xmlProdPrestashop = $this->produto->sincronizarProdudo($produto);
+
+                # Atualiza o estoque atual do produto no prestashop
+                $this->produto->atualizaEstoque($xmlProdPrestashop, $produto);
+            } else{
+
+                # Atualiza o estoque atual do produto no prestashop
+                $this->produto->atualizaEstoque($pesquisaProduto, $produto);
             }
 
 
@@ -45,6 +53,8 @@ class SincronizarController extends Controller
 
         # dump and die
         # dd($produtos);
+
+        return redirect()->route('dashboard');
 
     }
 }

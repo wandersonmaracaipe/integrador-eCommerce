@@ -47,7 +47,7 @@ class Produto extends Model
     public function sincronizarProdudo($produto)
     {
         try { # Conectando ao prestashop
-            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
             $xml = $webService->get(array('url' => env('PRESTASHOP_URL') . '/api/products?schema=blank'));
 
             # Montando XML de cadastro do produto
@@ -93,9 +93,6 @@ class Produto extends Model
             $product->depth = $produto->proComprimento;
             $product->weight = $produto->proPeso;
 
-            dd($product);
-
-
             $category_id = 2; // Categoria Inicio = 2
             $product->associations->categories->addChild('category')->addChild('id', $category_id);
             $product->id_category_default = $category_id;
@@ -111,8 +108,39 @@ class Produto extends Model
         }
     }
 
+    # Atualiza estoque do produto
+    public function atualizaEstoque($xmlProduto, $produto)
+    {
+        try {
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
+
+            $stockAvailableXml = $webService->get([
+                'resource' => 'stock_availables',
+                'id' => $xmlProduto->product->associations->stock_availables->stock_available->id
+            ]);
+
+            $dataStockAvailable = $stockAvailableXml->stock_available->children();
+
+            # intval($produto->proEstoqueAtual) : Converte float para inteiro (Estoque Atual Maxdata tipo fload)
+            $dataStockAvailable->quantity = intval($produto->proEstoqueAtual);
+
+            $updatedXml = $webService->edit([
+                'resource' => 'stock_availables',
+                'id' => $xmlProduto->product->associations->stock_availables->stock_available->id,
+                'putXml' => $stockAvailableXml->asXML()
+            ]);
+
+            return $updatedXml;
+
+        } catch (PrestaShopWebserviceException $ex) {
+            echo 'Error: <br />' . $ex->getMessage();
+        }
+
+    }
+
     # Obtem a quantidade de produtos sincronizados com o prestashop
-    public function produtosPrestashopIds() {
+    public function produtosPrestashopIds()
+    {
         try {
             $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
 
@@ -128,7 +156,8 @@ class Produto extends Model
     }
 
     # Obtem a quantidade de produtos sincronizados com o prestashop
-    public function vendasPrestashopIds() {
+    public function vendasPrestashopIds()
+    {
         try {
             $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
 
