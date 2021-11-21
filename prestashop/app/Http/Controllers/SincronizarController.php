@@ -37,8 +37,11 @@ class SincronizarController extends Controller
             # Se count() igual a zero, cadastra o produto
             if($pesquisaProduto->count() == 0){
 
+                # Envia o cadastro do grupo de produto para o prestashop para referenciar ao produto
+                $grupoProdIdPrestashop = $this->grupo->addUpdateGrupoProdutoPrestashop($produto->proGrupo);
+
                 # Envia o cadastro do produto para o prestashop
-                $xmlProdPrestashop = $this->produto->sincronizarProdudo($produto);
+                $xmlProdPrestashop = $this->produto->sincronizarProdudo($produto, $grupoProdIdPrestashop);
 
                 # Atualiza o estoque atual do produto no prestashop
                 $this->produto->atualizaEstoque($xmlProdPrestashop, $produto);

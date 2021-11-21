@@ -51,7 +51,7 @@ class Produto extends Model
     }
 
     # Sincronizando produdo maxdata para o prestashop
-    public function sincronizarProdudo($produto)
+    public function sincronizarProdudo($produto, $grupo)
     {
         try { # Conectando ao prestashop
             $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
@@ -100,7 +100,7 @@ class Produto extends Model
             $product->depth = $produto->proComprimento;
             $product->weight = $produto->proPeso;
 
-            $category_id = 2; // Categoria Inicio = 2
+            $category_id = $grupo->id; // Categoria Inicio = 2
             $product->associations->categories->addChild('category')->addChild('id', $category_id);
             $product->id_category_default = $category_id;
 
