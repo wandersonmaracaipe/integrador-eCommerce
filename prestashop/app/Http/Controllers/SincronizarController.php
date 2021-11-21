@@ -26,35 +26,33 @@ class SincronizarController extends Controller
         foreach ($produtos as $produto) {
 
             # Pesquisa o produto no prestashop
-            $pesquisaProduto = $this->produto->pesquisaProdutoPrestashop($produto->proId);
+            $pesquisaProduto = $this->produto->pesquisaProdutoPrestashop($produto);
 
             # Se count() igual a zero, cadastra o produto
             if($pesquisaProduto->count() == 0){
+
                 # Envia o cadastro do produto para o prestashop
                 $xmlProdPrestashop = $this->produto->sincronizarProdudo($produto);
 
                 # Atualiza o estoque atual do produto no prestashop
                 $this->produto->atualizaEstoque($xmlProdPrestashop, $produto);
+
             } else{
+
+                # Atualiza Dados do produto no prestashop
+                $this->produto->atualizaDadosProduto($pesquisaProduto, $produto);
 
                 # Atualiza o estoque atual do produto no prestashop
                 $this->produto->atualizaEstoque($pesquisaProduto, $produto);
+
             }
 
-
-            echo '<pre>';
-            echo 'ID: <b>' . $produto->proId . '</b><br/>';
-            echo 'DESCRIÇÃO: <b>' . $produto->proDescricao . '</b><br/>';
-            echo 'DESCRIÇÃO PDV: <b>' . $produto->proDescPdv . '</b><br/>';
-            echo 'VL. VENDA: <b>' . $produto->proVenda . '</b><br/>';
-            echo 'EMPRESA: <b>' . $produto->empId . '</b><br/>';
-            echo '</pre>';
         }
 
         # dump and die
         # dd($produtos);
 
-        return redirect()->route('dashboard');
+       //return redirect()->route('dashboard');
 
     }
 }

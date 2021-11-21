@@ -25,15 +25,22 @@ class Produto extends Model
     }
 
     # Verifica se produto já esta cadastro no prestashop
-    public function pesquisaProdutoPrestashop($proId)
+    public function pesquisaProdutoPrestashop($produto)
     {
         try {
             $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
 
+            # Referencia/ SKU do produto
+            if (!empty($produto->proCodigoSKU)) {
+                $reference = $produto->proCodigoSKU;
+            } else {
+                $reference = $produto->proId;
+            }
+
             $xml = $webService->get([
                 'resource' => 'products',
                 'display' => 'full',
-                'filter[reference]' => $proId,
+                'filter[reference]' => $reference,
             ]);
 
             return $xml->products->children();
@@ -108,11 +115,59 @@ class Produto extends Model
         }
     }
 
+    # Atualiza dos dados do produto
+    public function atualizaDadosProduto($xmlProduto, $produto) {
+        try { # Conectando ao prestashop
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
+
+            $xml = $webService->get([
+                'resource' => 'products',
+                'id' => (int) $xmlProduto->product->id,
+            ]);
+
+            # Montando XML de cadastro do produto
+            $product = $xml->product->children();
+
+            # Remove tags do XML
+            unset($product->manufacturer_name);
+            unset($product->position_in_category);
+            unset($product->quantity);
+
+            # Descrição do produto
+            $product->name->language[0][0] = $produto->proDescricao;
+
+            # Descrição completa do produto
+            $product->description->language[0][0] = $produto->proAplicacao;
+
+            # Descrição curta do produto
+            $product->description_short->language[0][0] = $produto->proDescPdv;
+
+            # Preço de venda do produto
+            $product->price = $produto->proVenda;
+            $product->wholesale_price = $produto->proVenda;
+            $product->width = $produto->proLargura;
+            $product->height = $produto->proAltura;
+            $product->depth = $produto->proComprimento;
+            $product->weight = $produto->proPeso;
+
+            $updatedXml = $webService->edit([
+                'resource' => 'products',
+                'id' => (int) $product->id,
+                'putXml' => $xml->asXML(),
+            ]);
+
+            return $updatedXml->product->children();
+
+        } catch (PrestaShopWebserviceException $ex) {
+            echo 'Other error: <br />' . $ex->getMessage();
+        }
+    }
+
     # Atualiza estoque do produto
     public function atualizaEstoque($xmlProduto, $produto)
     {
         try {
-            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
 
             $stockAvailableXml = $webService->get([
                 'resource' => 'stock_availables',
