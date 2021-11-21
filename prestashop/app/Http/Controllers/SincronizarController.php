@@ -2,18 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Grupo;
 use App\Models\Produto;
 use App\Models\ProdutoEmpresa;
+use App\Models\SubGrupo;
 
 class SincronizarController extends Controller
 {
     private $produto;
     private $produto_empresa;
+    private $grupo;
+    private $subgrupo;
 
-    public function __construct(Produto $produto, ProdutoEmpresa $produto_empresa)
+    public function __construct(Produto $produto, ProdutoEmpresa $produto_empresa, Grupo $grupo, SubGrupo $subgrupo)
     {
         $this->produto = $produto;
         $this->produto_empresa = $produto_empresa;
+        $this->grupo = $grupo;
+        $this->subgrupo = $subgrupo;
     }
 
     public function sincroniza()
@@ -52,7 +58,7 @@ class SincronizarController extends Controller
         # dump and die
         # dd($produtos);
 
-       //return redirect()->route('dashboard');
+       return redirect()->route('dashboard');
 
     }
 }

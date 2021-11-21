@@ -54,7 +54,7 @@ class Produto extends Model
     public function sincronizarProdudo($produto)
     {
         try { # Conectando ao prestashop
-            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
             $xml = $webService->get(array('url' => env('PRESTASHOP_URL') . '/api/products?schema=blank'));
 
             # Montando XML de cadastro do produto
@@ -116,13 +116,15 @@ class Produto extends Model
     }
 
     # Atualiza dos dados do produto
-    public function atualizaDadosProduto($xmlProduto, $produto) {
-        try { # Conectando ao prestashop
-            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
+    public function atualizaDadosProduto($xmlProduto, $produto)
+    {
+        try {
+            # Conectando ao prestashop
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
 
             $xml = $webService->get([
                 'resource' => 'products',
-                'id' => (int) $xmlProduto->product->id,
+                'id' => (int)$xmlProduto->product->id,
             ]);
 
             # Montando XML de cadastro do produto
@@ -152,7 +154,7 @@ class Produto extends Model
 
             $updatedXml = $webService->edit([
                 'resource' => 'products',
-                'id' => (int) $product->id,
+                'id' => (int)$product->id,
                 'putXml' => $xml->asXML(),
             ]);
 
@@ -226,4 +228,5 @@ class Produto extends Model
             echo 'Error: <br />' . $ex->getMessage();
         }
     }
+
 }
