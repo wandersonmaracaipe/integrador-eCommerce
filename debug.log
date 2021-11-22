@@ -7767,3 +7767,491 @@ Created()
 - 12:29:18.234 DEBUG: OnBrowserDestroyed()
 - 12:29:18.547 INFO: Ended application
 - 12:29:18.547 INFO: --------------------------------------------------------
+- 12:32:50.000 INFO: --------------------------------------------------------
+- 12:32:50.000 INFO: Started application
+- 12:32:50.000 INFO: Logging to: F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log
+- 12:32:50.000 INFO: Log level = DEBUG4
+- 12:32:50.000 INFO: Starting Mongoose 3.9c web server
+- 12:32:50.000 INFO: WWW directory: F:\PROJETOS MARACAIPE\Integrador-eCommerce\prestashop\public
+- 12:32:50.000 INFO: Index files: index.php
+- 12:32:50.000 INFO: CGI interpreter: F:\PROJETOS MARACAIPE\Integrador-eCommerce\php\php-cgi.exe
+- 12:32:50.000 INFO: CGI pattern: **.php$
+- 12:32:50.000 INFO: Hide files patterns: 
+- 12:32:50.000 DEBUG: The temp directory returned by OS contains unicode characters: C:\Users\WANDER~1\AppData\Local\Temp\
+- 12:32:50.000 INFO: CGI environment variables set: TMP=C:\Windows\Temp,TEMP=C:\Windows\Temp,TMPDIR=C:\Windows\Temp,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 12:32:50.000 INFO: Web server url: http://127.0.0.1:64129/
+- 12:32:50.000 INFO: remote_debugging_port = 65535
+- 12:32:50.000 DEBUG: Command line string for the browser process: "F:\PROJETOS MARACAIPE\Integrador-eCommerce\integrador.exe" --no-sandbox --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --remote-debugging-port=65535
+- 12:32:50.047 DEBUG: App::OnContextInitialized()
+- 12:32:50.047 DEBUG: Window max width/height = 1840/992
+- 12:32:50.047 DEBUG: GetBrowserWindow(): not found, hwnd = 1640452
+- 12:32:50.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 12:32:50.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 12:32:50.047 DEBUG: StoreBrowserWindow(): hwnd = 1640452
+- 12:32:50.000 DEBUG: Command line string for the gpu-process process: "F:\PROJETOS MARACAIPE\Integrador-eCommerce\integrador.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x10de --gpu-device-id=0x1244 --gpu-driver-vendor=NVIDIA --gpu-driver-version=23.21.13.8813 --gpu-driver-date=10-27-2017 --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --service-request-channel-token=7E317F99B2FAD70ABCCFB535BBE49DAF --mojo-platform-channel-handle=1764 /prefetch:2
+- 12:32:50.094 DEBUG: ClientHandler::OnAfterCreated()
+- 12:32:50.094 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 12:32:50.110 DEBUG: OnLoadingStateChange: loading=1, url=
+- 12:32:50.000 DEBUG: Command line string for the renderer process: "F:\PROJETOS MARACAIPE\Integrador-eCommerce\integrador.exe" --type=renderer --no-sandbox --primordial-pipe-token=7F62F70E24E076D7EA1BF176E2B60301 --lang=en-US --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=7F62F70E24E076D7EA1BF176E2B60301 --renderer-client-id=3 --mojo-platform-channel-handle=2348 /prefetch:1
+- 12:32:50.032 DEBUG: OnBrowserCreated()
+[1122/123250.431:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 12:32:52.375 INFO: GET 200 /vendor/fontawesome-free/css/all.min.css
+- 12:32:52.375 INFO: GET 200 /css/sb-admin-2.min.css
+- 12:32:52.375 INFO: GET 200 /
+- 12:32:52.266 DEBUG: OnContextCreated()
+- 12:32:52.407 INFO: GET 200 /vendor/bootstrap/js/bootstrap.bundle.min.js
+- 12:32:52.407 INFO: GET 200 /js/sb-admin-2.min.js
+- 12:32:52.407 INFO: GET 200 /vendor/chart.js/Chart.min.js
+- 12:32:52.407 INFO: GET 200 /js/demo/chart-area-demo.js
+- 12:32:52.422 INFO: GET 200 /js/demo/chart-pie-demo.js
+- 12:32:52.625 INFO: GET 404 /vendor/jquery/jquery.min.js
+- 12:32:52.625 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/123252.887:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:64129/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/123252.888:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:64129/js/sb-admin-2.min.js (7)
+[1122/123252.920:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+[1122/123252.920:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+- 12:32:52.657 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/
+- 12:33:23.610 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/
+- 12:33:24.735 DEBUG: OnContextCreated()
+- 12:33:24.860 INFO: GET 200 /
+- 12:33:24.875 INFO: GET 200 /vendor/fontawesome-free/css/all.min.css
+- 12:33:24.875 INFO: GET 200 /css/sb-admin-2.min.css
+- 12:33:24.875 INFO: GET 200 /js/sb-admin-2.min.js
+- 12:33:24.875 INFO: GET 200 /vendor/bootstrap/js/bootstrap.bundle.min.js
+- 12:33:24.875 INFO: GET 200 /js/demo/chart-area-demo.js
+- 12:33:24.875 INFO: GET 200 /vendor/chart.js/Chart.min.js
+- 12:33:24.875 INFO: GET 200 /js/demo/chart-pie-demo.js
+[1122/123324.332:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:64129/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/123324.335:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:64129/js/sb-admin-2.min.js (7)
+- 12:33:24.079 INFO: GET 404 /vendor/jquery/jquery.min.js
+- 12:33:24.079 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/123324.342:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+[1122/123324.342:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+- 12:33:24.079 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/
+- 13:07:04.891 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/
+- 13:07:04.282 DEBUG: OnContextCreated()
+- 13:07:04.594 INFO: GET 200 /sincronizar
+- 13:07:05.266 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:11:23.485 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:11:24.672 DEBUG: OnContextCreated()
+- 13:11:24.313 INFO: GET 200 /sincronizar
+- 13:11:24.313 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:11:26.719 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:11:27.875 DEBUG: OnContextCreated()
+- 13:11:27.516 INFO: GET 200 /sincronizar
+- 13:11:27.516 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:11:29.016 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:11:29.891 DEBUG: OnContextCreated()
+- 13:11:29.219 INFO: GET 404 /vendor/jquery/jquery.min.js
+- 13:11:29.219 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/131129.491:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:64129/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/131129.662:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:64129/js/sb-admin-2.min.js (7)
+- 13:11:29.407 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/131129.691:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+[1122/131129.692:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+- 13:11:29.438 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/
+- 13:11:32.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/
+- 13:11:32.375 DEBUG: OnContextCreated()
+- 13:11:32.500 INFO: GET 200 /
+- 13:11:32.500 INFO: GET 200 /vendor/fontawesome-free/css/all.min.css
+- 13:11:32.500 INFO: GET 200 /css/sb-admin-2.min.css
+- 13:11:32.563 INFO: GET 200 /vendor/bootstrap/js/bootstrap.bundle.min.js
+- 13:11:32.563 INFO: GET 200 /js/sb-admin-2.min.js
+- 13:11:32.563 INFO: GET 200 /vendor/chart.js/Chart.min.js
+- 13:11:32.563 INFO: GET 200 /js/demo/chart-pie-demo.js
+- 13:11:32.563 INFO: GET 200 /js/demo/chart-area-demo.js
+[1122/131133.022:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:64129/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+- 13:11:33.766 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+- 13:11:33.766 INFO: GET 404 /vendor/jquery/jquery.min.js
+[1122/131133.190:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:64129/js/sb-admin-2.min.js (7)
+- 13:11:33.938 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/131133.197:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+[1122/131133.197:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+- 13:11:33.938 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/
+- 13:16:29.000 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/
+- 13:16:29.219 DEBUG: OnContextCreated()
+- 13:16:29.438 INFO: GET 200 /sincronizar
+- 13:16:30.938 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:19:36.516 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:19:37.704 DEBUG: OnContextCreated()
+- 13:19:37.344 INFO: GET 200 /sincronizar
+- 13:19:37.344 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:20:00.329 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:20:00.469 DEBUG: OnContextCreated()
+- 13:20:01.110 INFO: GET 200 /sincronizar
+- 13:20:01.125 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:21:16.157 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:21:16.407 DEBUG: OnContextCreated()
+- 13:21:16.547 INFO: GET 500 /sincronizar
+- 13:21:17.032 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:21:31.579 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:21:32.735 DEBUG: OnContextCreated()
+- 13:21:32.375 INFO: GET 200 /sincronizar
+- 13:21:32.391 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:21:49.844 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:21:49.985 DEBUG: OnContextCreated()
+- 13:21:49.625 INFO: GET 200 /sincronizar
+- 13:21:49.641 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:22:34.157 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:22:34.360 DEBUG: OnContextCreated()
+- 13:22:35.985 INFO: GET 200 /sincronizar
+- 13:22:35.000 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:22:37.079 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:22:37.250 DEBUG: OnContextCreated()
+- 13:22:38.891 INFO: GET 200 /sincronizar
+- 13:22:38.891 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:22:42.016 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:22:42.907 DEBUG: OnContextCreated()
+- 13:22:42.235 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+- 13:22:42.235 INFO: GET 404 /vendor/jquery/jquery.min.js
+[1122/132242.502:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:64129/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/132242.674:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:64129/js/sb-admin-2.min.js (7)
+- 13:22:42.422 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/132242.704:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+[1122/132242.705:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+- 13:22:42.454 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/
+- 13:22:43.610 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/
+- 13:22:44.782 DEBUG: OnContextCreated()
+- 13:22:44.422 INFO: GET 200 /sincronizar
+- 13:22:44.422 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:22:51.282 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:22:51.438 DEBUG: OnContextCreated()
+- 13:22:52.079 INFO: GET 200 /sincronizar
+- 13:22:52.079 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:23:33.594 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:23:34.829 DEBUG: OnContextCreated()
+- 13:23:34.954 INFO: GET 500 /sincronizar
+- 13:23:34.500 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:23:43.625 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:23:44.766 DEBUG: OnContextCreated()
+- 13:23:44.407 INFO: GET 200 /sincronizar
+- 13:23:44.407 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:23:50.016 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:23:50.172 DEBUG: OnContextCreated()
+- 13:23:51.797 INFO: GET 200 /sincronizar
+- 13:23:51.813 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:24:20.235 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:24:20.422 DEBUG: OnContextCreated()
+- 13:24:21.047 INFO: GET 200 /sincronizar
+- 13:24:21.063 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:24:38.047 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:24:38.188 DEBUG: OnContextCreated()
+- 13:24:39.829 INFO: GET 200 /sincronizar
+- 13:24:39.829 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:24:47.516 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:24:48.657 DEBUG: OnContextCreated()
+- 13:24:48.297 INFO: GET 200 /sincronizar
+- 13:24:48.297 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:24:50.094 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:24:50.266 DEBUG: OnContextCreated()
+- 13:24:51.907 INFO: GET 200 /sincronizar
+- 13:24:51.907 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:25:07.625 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:25:08.875 DEBUG: OnContextCreated()
+- 13:25:08.516 INFO: GET 200 /sincronizar
+- 13:25:08.532 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:29:13.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:29:13.094 DEBUG: OnContextCreated()
+- 13:29:13.735 INFO: GET 200 /sincronizar
+- 13:29:13.735 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:32:04.719 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:32:05.922 DEBUG: OnContextCreated()
+- 13:32:05.063 INFO: GET 500 /sincronizar
+- 13:32:05.547 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:36:51.375 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:36:52.625 DEBUG: OnContextCreated()
+- 13:36:52.766 INFO: GET 500 /sincronizar
+- 13:36:52.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:38:03.360 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:38:03.610 DEBUG: OnContextCreated()
+- 13:38:04.735 INFO: GET 500 /sincronizar
+- 13:38:04.172 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:38:28.985 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:38:28.141 DEBUG: OnContextCreated()
+- 13:38:29.782 INFO: GET 200 /sincronizar
+- 13:38:29.782 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:39:19.938 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:39:19.813 DEBUG: OnContextCreated()
+- 13:39:19.141 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+- 13:39:19.157 INFO: GET 404 /vendor/jquery/jquery.min.js
+[1122/133919.414:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:64129/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/133919.585:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:64129/js/sb-admin-2.min.js (7)
+- 13:39:19.329 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/133919.606:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+[1122/133919.606:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+- 13:39:19.344 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/
+- 13:39:29.625 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/
+- 13:39:30.110 DEBUG: OnContextCreated()
+- 13:39:31.766 INFO: GET 200 /sincronizar
+- 13:39:31.766 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:46:18.594 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:46:19.000 DEBUG: OnContextCreated()
+- 13:46:19.657 INFO: GET 200 /sincronizar
+- 13:46:19.672 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:47:52.016 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:47:52.438 DEBUG: OnContextCreated()
+- 13:47:52.579 INFO: GET 500 /sincronizar
+- 13:47:53.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:49:28.625 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:49:29.047 DEBUG: OnContextCreated()
+- 13:49:29.266 INFO: GET 200 /sincronizar
+- 13:49:30.844 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:51:03.766 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:51:03.141 DEBUG: OnContextCreated()
+- 13:51:04.766 INFO: GET 200 /sincronizar
+- 13:51:04.844 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:51:28.000 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:51:28.438 DEBUG: OnContextCreated()
+- 13:51:28.579 INFO: GET 500 /sincronizar
+- 13:51:29.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:51:40.391 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:51:41.735 DEBUG: OnContextCreated()
+- 13:51:41.360 INFO: GET 200 /sincronizar
+- 13:51:41.375 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:52:46.141 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:52:46.610 DEBUG: OnContextCreated()
+- 13:52:47.750 INFO: GET 500 /sincronizar
+- 13:52:47.297 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:52:54.985 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:52:54.438 DEBUG: OnContextCreated()
+- 13:52:54.563 INFO: GET 500 /sincronizar
+- 13:52:55.079 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:53:21.547 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:53:22.860 DEBUG: OnContextCreated()
+- 13:53:22.500 INFO: GET 200 /sincronizar
+- 13:53:22.500 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:53:32.532 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:53:33.875 DEBUG: OnContextCreated()
+- 13:53:33.516 INFO: GET 200 /sincronizar
+- 13:53:33.516 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:53:45.219 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:53:46.610 DEBUG: OnContextCreated()
+- 13:53:46.250 INFO: GET 200 /sincronizar
+- 13:53:46.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:53:48.407 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:53:49.735 DEBUG: OnContextCreated()
+- 13:53:49.375 INFO: GET 200 /sincronizar
+- 13:53:49.375 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:53:58.532 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:53:58.422 DEBUG: OnContextCreated()
+- 13:53:59.750 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+- 13:53:59.750 INFO: GET 404 /vendor/jquery/jquery.min.js
+[1122/135359.019:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:64129/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/135359.188:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:64129/js/sb-admin-2.min.js (7)
+- 13:53:59.922 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/135359.209:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+[1122/135359.210:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+- 13:53:59.954 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/
+- 13:54:01.250 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/
+- 13:54:01.344 DEBUG: OnContextCreated()
+- 13:54:01.469 INFO: GET 200 /
+- 13:54:01.469 INFO: GET 200 /vendor/fontawesome-free/css/all.min.css
+- 13:54:01.469 INFO: GET 200 /css/sb-admin-2.min.css
+- 13:54:01.485 INFO: GET 200 /vendor/bootstrap/js/bootstrap.bundle.min.js
+- 13:54:01.485 INFO: GET 200 /js/sb-admin-2.min.js
+- 13:54:01.485 INFO: GET 200 /vendor/chart.js/Chart.min.js
+- 13:54:01.485 INFO: GET 200 /js/demo/chart-area-demo.js
+- 13:54:01.485 INFO: GET 200 /js/demo/chart-pie-demo.js
+[1122/135401.939:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:64129/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/135401.944:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:64129/js/sb-admin-2.min.js (7)
+- 13:54:01.688 INFO: GET 404 /vendor/jquery/jquery.min.js
+- 13:54:01.688 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/135401.951:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+[1122/135401.951:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+- 13:54:01.688 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/
+- 13:56:03.625 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/
+- 13:56:04.735 DEBUG: OnContextCreated()
+- 13:56:04.875 INFO: GET 200 /
+- 13:56:04.875 INFO: GET 200 /vendor/fontawesome-free/css/all.min.css
+- 13:56:04.875 INFO: GET 200 /css/sb-admin-2.min.css
+- 13:56:04.875 INFO: GET 200 /js/sb-admin-2.min.js
+- 13:56:04.875 INFO: GET 200 /vendor/bootstrap/js/bootstrap.bundle.min.js
+- 13:56:04.875 INFO: GET 200 /vendor/chart.js/Chart.min.js
+- 13:56:04.875 INFO: GET 200 /js/demo/chart-area-demo.js
+- 13:56:04.875 INFO: GET 200 /js/demo/chart-pie-demo.js
+[1122/135604.332:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:64129/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/135604.347:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:64129/js/sb-admin-2.min.js (7)
+- 13:56:04.094 INFO: GET 404 /vendor/jquery/jquery.min.js
+- 13:56:04.094 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/135604.356:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+[1122/135604.356:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:64129/vendor/chart.js/Chart.min.js (7)
+- 13:56:04.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/
+- 13:56:05.141 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/
+- 13:56:05.532 DEBUG: OnContextCreated()
+- 13:56:06.469 INFO: GET 200 /sincronizar
+- 13:56:06.485 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:56:18.297 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:56:19.922 DEBUG: OnContextCreated()
+- 13:56:19.563 INFO: GET 200 /sincronizar
+- 13:56:19.563 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:56:32.516 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:56:33.000 DEBUG: OnContextCreated()
+- 13:56:33.641 INFO: GET 200 /sincronizar
+- 13:56:33.641 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+- 13:56:46.907 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:64129/sincronizar
+- 13:56:46.454 DEBUG: OnContextCreated()
+- 13:56:47.079 INFO: GET 200 /sincronizar
+- 13:56:47.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:64129/sincronizar
+[1122/163011.522:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[1122/163016.532:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[1122/163021.547:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[1122/163655.671:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[1122/163700.680:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+- 18:56:30.313 DEBUG: WM_DESTROY
+- 18:56:30.313 DEBUG: RemoveBrowserWindow(): hwnd = 1640452
+- 18:56:30.313 INFO: Stopping Mongoose web server
+- 18:56:30.313 DEBUG: Mongoose webserver stopped immediately
+- 18:56:30.313 DEBUG: OnBeforeClose() hwnd=657358
+- 18:56:30.313 DEBUG: RemoveBrowserWindow(): hwnd = 657358
+- 18:56:30.313 DEBUG: GetBrowserWindow(): not found, hwnd = 657358
+- 18:56:30.313 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 18:56:30.313 DEBUG: Calling CefQuitMessageLoop()
+- 18:56:30.235 DEBUG: OnBrowserDestroyed()
+- 18:56:30.391 INFO: Ended application
+- 18:56:30.391 INFO: --------------------------------------------------------
+- 18:56:32.016 INFO: --------------------------------------------------------
+- 18:56:32.016 INFO: Started application
+- 18:56:32.016 INFO: Logging to: F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log
+- 18:56:32.016 INFO: Log level = DEBUG4
+- 18:56:32.016 INFO: Starting Mongoose 3.9c web server
+- 18:56:32.016 INFO: WWW directory: F:\PROJETOS MARACAIPE\Integrador-eCommerce\prestashop\public
+- 18:56:32.016 INFO: Index files: index.php
+- 18:56:32.016 INFO: CGI interpreter: F:\PROJETOS MARACAIPE\Integrador-eCommerce\php\php-cgi.exe
+- 18:56:32.016 INFO: CGI pattern: **.php$
+- 18:56:32.016 INFO: Hide files patterns: 
+- 18:56:32.016 DEBUG: The temp directory returned by OS contains unicode characters: C:\Users\WANDER~1\AppData\Local\Temp\
+- 18:56:32.016 INFO: CGI environment variables set: TMP=C:\Windows\Temp,TEMP=C:\Windows\Temp,TMPDIR=C:\Windows\Temp,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 18:56:32.016 INFO: Web server url: http://127.0.0.1:56613/
+- 18:56:32.016 INFO: remote_debugging_port = 57163
+- 18:56:32.016 DEBUG: Command line string for the browser process: "F:\PROJETOS MARACAIPE\Integrador-eCommerce\integrador.exe" --no-sandbox --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --remote-debugging-port=57163
+- 18:56:32.047 DEBUG: App::OnContextInitialized()
+- 18:56:32.047 DEBUG: Window max width/height = 1840/992
+- 18:56:32.047 DEBUG: GetBrowserWindow(): not found, hwnd = 8194080
+- 18:56:32.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 18:56:32.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 18:56:32.047 DEBUG: StoreBrowserWindow(): hwnd = 8194080
+- 18:56:32.000 DEBUG: Command line string for the gpu-process process: "F:\PROJETOS MARACAIPE\Integrador-eCommerce\integrador.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x10de --gpu-device-id=0x1244 --gpu-driver-vendor=NVIDIA --gpu-driver-version=23.21.13.8813 --gpu-driver-date=10-27-2017 --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --service-request-channel-token=22643D5129B7DF4D722A95E23D31CC18 --mojo-platform-channel-handle=1792 /prefetch:2
+- 18:56:32.094 DEBUG: ClientHandler::OnAfterCreated()
+- 18:56:32.094 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 18:56:32.094 DEBUG: OnLoadingStateChange: loading=1, url=
+- 18:56:32.000 DEBUG: Command line string for the renderer process: "F:\PROJETOS MARACAIPE\Integrador-eCommerce\integrador.exe" --type=renderer --no-sandbox --primordial-pipe-token=39E90C95AF368ED38E338F1915F7F3EB --lang=en-US --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=39E90C95AF368ED38E338F1915F7F3EB --renderer-client-id=3 --mojo-platform-channel-handle=2384 /prefetch:1
+- 18:56:32.032 DEBUG: OnBrowserCreated()
+[1122/185632.255:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 18:56:33.406 INFO: GET 200 /vendor/fontawesome-free/css/all.min.css
+- 18:56:33.406 INFO: GET 200 /css/sb-admin-2.min.css
+- 18:56:33.406 INFO: GET 200 /
+- 18:56:33.313 DEBUG: OnContextCreated()
+- 18:56:33.469 INFO: GET 200 /vendor/bootstrap/js/bootstrap.bundle.min.js
+- 18:56:33.469 INFO: GET 200 /js/sb-admin-2.min.js
+- 18:56:33.469 INFO: GET 200 /js/demo/chart-area-demo.js
+- 18:56:33.469 INFO: GET 200 /vendor/chart.js/Chart.min.js
+- 18:56:33.484 INFO: GET 200 /js/demo/chart-pie-demo.js
+- 18:56:33.687 INFO: GET 404 /vendor/jquery/jquery.min.js
+- 18:56:33.687 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/185633.761:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:56613/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/185633.931:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:56613/js/sb-admin-2.min.js (7)
+- 18:56:33.859 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/185633.962:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+[1122/185633.963:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+- 18:56:33.891 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:56613/
+- 18:56:43.625 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:56613/
+- 18:56:44.297 DEBUG: OnContextCreated()
+- 18:56:45.156 INFO: GET 200 /sincronizar
+- 18:56:45.172 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:56613/sincronizar
+- 18:58:09.562 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:56613/sincronizar
+- 18:58:10.641 INFO: GET 302 /sincronizar
+- 18:58:10.766 DEBUG: OnContextCreated()
+- 18:58:10.875 INFO: GET 200 /
+- 18:58:10.891 INFO: GET 200 /vendor/fontawesome-free/css/all.min.css
+- 18:58:10.891 INFO: GET 200 /css/sb-admin-2.min.css
+- 18:58:10.891 INFO: GET 200 /vendor/bootstrap/js/bootstrap.bundle.min.js
+- 18:58:10.891 INFO: GET 200 /js/sb-admin-2.min.js
+- 18:58:10.891 INFO: GET 200 /vendor/chart.js/Chart.min.js
+- 18:58:10.891 INFO: GET 200 /js/demo/chart-area-demo.js
+- 18:58:10.891 INFO: GET 200 /js/demo/chart-pie-demo.js
+[1122/185811.159:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:56613/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/185811.161:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:56613/js/sb-admin-2.min.js (7)
+- 18:58:11.094 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+- 18:58:11.094 INFO: GET 404 /vendor/jquery/jquery.min.js
+[1122/185811.169:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+[1122/185811.169:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+- 18:58:11.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:56613/
+- 18:58:12.797 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:56613/
+- 18:58:13.797 INFO: GET 302 /sincronizar
+- 18:58:14.969 DEBUG: OnContextCreated()
+- 18:58:14.078 INFO: GET 200 /
+- 18:58:14.281 INFO: GET 404 /vendor/jquery/jquery.min.js
+- 18:58:14.281 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/185814.358:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:56613/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/185814.359:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:56613/js/sb-admin-2.min.js (7)
+[1122/185814.389:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+[1122/185814.390:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+- 18:58:14.312 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:56613/
+- 19:01:59.375 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:56613/
+- 19:02:00.406 INFO: GET 302 /sincronizar
+- 19:02:00.547 DEBUG: OnContextCreated()
+- 19:02:00.656 INFO: GET 200 /
+[1122/190200.937:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:56613/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+- 19:02:00.859 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+- 19:02:00.875 INFO: GET 404 /vendor/jquery/jquery.min.js
+[1122/190201.118:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:56613/js/sb-admin-2.min.js (7)
+- 19:02:01.047 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/190201.124:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+[1122/190201.124:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+- 19:02:01.047 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:56613/
+- 19:04:11.281 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:56613/
+- 19:04:11.422 DEBUG: OnContextCreated()
+- 19:04:11.547 INFO: GET 200 /
+- 19:04:11.547 INFO: GET 200 /vendor/fontawesome-free/css/all.min.css
+- 19:04:11.547 INFO: GET 200 /css/sb-admin-2.min.css
+- 19:04:11.547 INFO: GET 200 /vendor/bootstrap/js/bootstrap.bundle.min.js
+- 19:04:11.547 INFO: GET 200 /js/sb-admin-2.min.js
+- 19:04:11.547 INFO: GET 200 /vendor/chart.js/Chart.min.js
+- 19:04:11.547 INFO: GET 200 /js/demo/chart-area-demo.js
+- 19:04:11.547 INFO: GET 200 /js/demo/chart-pie-demo.js
+- 19:04:11.750 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+- 19:04:11.750 INFO: GET 404 /vendor/jquery/jquery.min.js
+[1122/190412.004:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:56613/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/190412.198:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:56613/js/sb-admin-2.min.js (7)
+- 19:04:12.125 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/190412.205:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+[1122/190412.206:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+- 19:04:12.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:56613/
+- 19:04:12.641 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:56613/
+- 19:04:13.766 DEBUG: OnContextCreated()
+- 19:04:15.109 INFO: GET 200 /sincronizar
+- 19:04:15.125 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:56613/sincronizar
+- 19:04:15.125 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:56613/sincronizar
+- 19:04:15.235 DEBUG: OnContextCreated()
+- 19:04:15.344 INFO: GET 200 /
+- 19:04:15.547 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+- 19:04:15.547 INFO: GET 404 /vendor/jquery/jquery.min.js
+[1122/190415.622:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:56613/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/190415.622:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:56613/js/sb-admin-2.min.js (7)
+[1122/190415.652:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+[1122/190415.653:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+- 19:04:15.578 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:56613/
+- 19:05:29.109 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:56613/
+- 19:05:30.516 INFO: GET 302 /sincronizar
+- 19:05:30.625 DEBUG: OnContextCreated()
+- 19:05:30.734 INFO: GET 200 /
+- 19:05:31.937 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/190531.011:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:56613/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+- 19:05:31.937 INFO: GET 404 /vendor/jquery/jquery.min.js
+[1122/190531.178:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:56613/js/sb-admin-2.min.js (7)
+- 19:05:31.109 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/190531.184:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+[1122/190531.185:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56613/vendor/chart.js/Chart.min.js (7)
+- 19:05:31.109 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:56613/
+- 19:05:40.812 DEBUG: WM_DESTROY
+- 19:05:40.812 DEBUG: RemoveBrowserWindow(): hwnd = 8194080
+- 19:05:40.812 INFO: Stopping Mongoose web server
+- 19:05:40.812 DEBUG: Mongoose webserver stopped immediately
+- 19:05:40.812 DEBUG: OnBeforeClose() hwnd=1966692
+- 19:05:40.812 DEBUG: RemoveBrowserWindow(): hwnd = 1966692
+- 19:05:40.812 DEBUG: GetBrowserWindow(): not found, hwnd = 1966692
+- 19:05:40.812 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 19:05:40.812 DEBUG: Calling CefQuitMessageLoop()
+- 19:05:40.719 DEBUG: OnBrowserDestroyed()
+- 19:05:41.000 INFO: Ended application
+- 19:05:41.000 INFO: --------------------------------------------------------

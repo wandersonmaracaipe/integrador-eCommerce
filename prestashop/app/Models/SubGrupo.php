@@ -65,7 +65,7 @@ class SubGrupo extends Model
             $subgrupo = self::addSubGrupoPrestashop($subgrupo, $idParent);
 
         } else {
-            dd($retornoPrestashop);
+            return $retornoPrestashop->children();
         }
 
         return $subgrupo;
@@ -75,7 +75,7 @@ class SubGrupo extends Model
     public function addSubGrupoPrestashop($dadosSubGrupo, $idParent = NULL)
     {
         try {
-            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
 
             $xml = $webService->get(array('url' => env('PRESTASHOP_URL') . '/api/categories?schema=blank'));
 
@@ -84,7 +84,8 @@ class SubGrupo extends Model
             $category->description->language[0][0] = $dadosSubGrupo->sgpNome;
             $category->link_rewrite->language[0][0] = $dadosSubGrupo->sgpNome;
 
-            $category->active = $dadosSubGrupo->sgpDesativa;
+            if ($dadosSubGrupo->sgpDesativa == 0): $category->active = 1;
+            else: $category->active = 0; endif;
 
             if ($idParent == NULL): $category->id_parent = 2;
             else: $category->id_parent = $idParent; endif;

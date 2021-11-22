@@ -24,7 +24,7 @@ class Grupo extends Model
     # Recupera apenas um grupo de produto do sistema maxdata
     public function getGrupo($gdpId)
     {
-        $grupoProduto = self::where('gdpId', (int) $gdpId)->first();
+        $grupoProduto = self::where('gdpId', (int)$gdpId)->first();
 
         return $grupoProduto;
     }
@@ -74,7 +74,7 @@ class Grupo extends Model
     public function addGrupoPrestashop($dadosGrupo, $idParent = NULL)
     {
         try {
-            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
 
             $xml = $webService->get(array('url' => env('PRESTASHOP_URL') . '/api/categories?schema=blank'));
 
@@ -83,7 +83,8 @@ class Grupo extends Model
             $category->description->language[0][0] = $dadosGrupo->gdpNome;
             $category->link_rewrite->language[0][0] = $dadosGrupo->gdpNome;
 
-            $category->active = $dadosGrupo->gdpDesativa;
+            if ($dadosGrupo->gdpDesativa == 0): $category->active = 1;
+            else: $category->active = 0; endif;
 
             if ($idParent == NULL): $category->id_parent = 2;
             else: $category->id_parent = $idParent; endif;
