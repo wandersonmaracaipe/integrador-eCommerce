@@ -24,7 +24,7 @@ class Grupo extends Model
     # Recupera apenas um grupo de produto do sistema maxdata
     public function getGrupo($gdpId)
     {
-        $grupoProduto = self::where('gdpId', (int)$gdpId)->first();
+        $grupoProduto = self::where('gdpId', (int) $gdpId)->first();
 
         return $grupoProduto;
     }
@@ -60,12 +60,11 @@ class Grupo extends Model
 
         # Verificar o retorno da presquisa, se zero, cadastra, caso contrario, atualizamos apenas a descrição
         if ($retornoPrestashop->count() == 0) {
-
             # Enviamos o cadastro do grupo e armazenamos novamente na variavel grupo
             $grupo = self::addGrupoPrestashop($grupo);
-
         } else {
-            dd('else grupo');
+            # retornar ID do grupo existente
+            return $retornoPrestashop->children();
         }
 
         return $grupo;
@@ -85,6 +84,7 @@ class Grupo extends Model
             $category->link_rewrite->language[0][0] = $dadosGrupo->gdpNome;
 
             $category->active = $dadosGrupo->gdpDesativa;
+
             if ($idParent == NULL): $category->id_parent = 2;
             else: $category->id_parent = $idParent; endif;
 

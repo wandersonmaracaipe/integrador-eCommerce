@@ -51,7 +51,7 @@ class Produto extends Model
     }
 
     # Sincronizando produdo maxdata para o prestashop
-    public function sincronizarProdudo($produto, $grupo)
+    public function sincronizarProdudo($produto, $grupo, $subgrupo)
     {
         try { # Conectando ao prestashop
             $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
@@ -100,9 +100,19 @@ class Produto extends Model
             $product->depth = $produto->proComprimento;
             $product->weight = $produto->proPeso;
 
-            $category_id = $grupo->id; // Categoria Inicio = 2
-            $product->associations->categories->addChild('category')->addChild('id', $category_id);
-            $product->id_category_default = $category_id;
+            # Grupo diferente de NULL
+            if ($grupo != NULL) {
+                # Categorias do produto (Grupo)
+                $product->associations->categories->addChild('category')->addChild('id', $grupo->id);
+                $product->id_category_default = $grupo->id;
+            }
+
+            # SubGrupo diferente de NULL
+            if ($subgrupo != NULL) {
+                # Categorias do produto (Grupo)
+                $product->associations->categories->addChild('category')->addChild('id', $subgrupo->id);
+                $product->id_category_default = $subgrupo->id;
+            }
 
             $opt = array('resource' => 'products');
             $opt['postXml'] = $xml->asXML();

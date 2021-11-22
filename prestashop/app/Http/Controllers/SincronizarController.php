@@ -24,6 +24,8 @@ class SincronizarController extends Controller
 
     public function sincroniza()
     {
+        $grupoPrestashop = null;
+        $subgrupoPrestashop = null;
 
         # Select na tabela produtos para buscar todos os produtos marcados para usar ecommerce
         $produtos = $this->produto->getProdutosMaxdata();
@@ -37,13 +39,20 @@ class SincronizarController extends Controller
             # Se count() igual a zero, cadastra o produto
             if($pesquisaProduto->count() == 0){
 
-                # Envia o cadastro do grupo de produto para o prestashop para referenciar ao produto
-                $grupoProdIdPrestashop = $this->grupo->addUpdateGrupoProdutoPrestashop($produto->proGrupo);
+                # Se produto estiver vinculado em um grupo, enviamos o cadastro
+                if(!empty($produto->proSubGrupo)){
+                    # Envia o cadastro do grupo de produto para o prestashop para referenciar ao produto
+                    $grupoPrestashop = $this->grupo->addUpdateGrupoProdutoPrestashop($produto->proGrupo);
+                }
 
-                $subGrupoProdIdPrestashop = $this->grupo->addUpdateSubGrupoProdutoPrestashop($produto->proSubGrupo);
+                # Se produto estiver vinculado em um subgrupo de produto, enviamos o cadastro
+                if(!empty($produto->proSubGrupo)){
+                    # Envia o cadastro do subgrup de produto para o prestashop e referencia o subgrupo ao grupo (idParent)
+                    $subgrupoPrestashop = $this->subgrupo->addUpdateSubGrupoProdutoPrestashop($produto->proSubGrupo, $grupoPrestashop->id);
+                }
 
                 # Envia o cadastro do produto para o prestashop
-                $xmlProdPrestashop = $this->produto->sincronizarProdudo($produto, $grupoProdIdPrestashop, $subGrupoProdIdPrestashop);
+                $xmlProdPrestashop = $this->produto->sincronizarProdudo($produto, $grupoPrestashop, $subgrupoPrestashop);
 
                 # Atualiza o estoque atual do produto no prestashop
                 $this->produto->atualizaEstoque($xmlProdPrestashop, $produto);
