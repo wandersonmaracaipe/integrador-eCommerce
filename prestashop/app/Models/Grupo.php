@@ -32,7 +32,6 @@ class Grupo extends Model
     # Pesquisa o grupo de produto do maxdata no prestashop
     public function pesquisaGrupoPrestashop($gdpNome)
     {
-
         try {
             $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
 
@@ -65,8 +64,6 @@ class Grupo extends Model
             # Enviamos o cadastro do grupo e armazenamos novamente na variavel grupo
             $grupo = self::addGrupoPrestashop($grupo);
 
-
-
         } else {
             dd('else grupo');
         }
@@ -88,7 +85,8 @@ class Grupo extends Model
             $category->link_rewrite->language[0][0] = $dadosGrupo->gdpNome;
 
             $category->active = $dadosGrupo->gdpDesativa;
-            if($idParent == NULL): $category->id_parent = 2; else: $category->id_parent = $idParent; endif;
+            if ($idParent == NULL): $category->id_parent = 2;
+            else: $category->id_parent = $idParent; endif;
 
             $category->is_root_category = 0;
             $opt = array('resource' => 'categories');

@@ -7596,3 +7596,174 @@ Created()
 - 17:24:50.313 DEBUG: OnBrowserDestroyed()
 - 17:24:50.484 INFO: Ended application
 - 17:24:50.484 INFO: --------------------------------------------------------
+- 07:47:44.000 INFO: --------------------------------------------------------
+- 07:47:44.000 INFO: Started application
+- 07:47:44.000 INFO: Logging to: F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log
+- 07:47:44.000 INFO: Log level = DEBUG4
+- 07:47:44.000 INFO: Starting Mongoose 3.9c web server
+- 07:47:44.000 INFO: WWW directory: F:\PROJETOS MARACAIPE\Integrador-eCommerce\prestashop\public
+- 07:47:44.000 INFO: Index files: index.php
+- 07:47:44.000 INFO: CGI interpreter: F:\PROJETOS MARACAIPE\Integrador-eCommerce\php\php-cgi.exe
+- 07:47:44.000 INFO: CGI pattern: **.php$
+- 07:47:44.000 INFO: Hide files patterns: 
+- 07:47:44.000 DEBUG: The temp directory returned by OS contains unicode characters: C:\Users\WANDER~1\AppData\Local\Temp\
+- 07:47:44.000 INFO: CGI environment variables set: TMP=C:\Windows\Temp,TEMP=C:\Windows\Temp,TMPDIR=C:\Windows\Temp,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 07:47:44.000 INFO: Web server url: http://127.0.0.1:56846/
+- 07:47:44.000 INFO: remote_debugging_port = 49922
+- 07:47:44.016 DEBUG: Command line string for the browser process: "F:\PROJETOS MARACAIPE\Integrador-eCommerce\integrador.exe" --no-sandbox --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --remote-debugging-port=49922
+- 07:47:44.047 DEBUG: App::OnContextInitialized()
+- 07:47:44.047 DEBUG: Window max width/height = 1840/992
+- 07:47:44.047 DEBUG: GetBrowserWindow(): not found, hwnd = 10421790
+- 07:47:44.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 07:47:44.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 07:47:44.047 DEBUG: StoreBrowserWindow(): hwnd = 10421790
+- 07:47:44.000 DEBUG: Command line string for the gpu-process process: "F:\PROJETOS MARACAIPE\Integrador-eCommerce\integrador.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x10de --gpu-device-id=0x1244 --gpu-driver-vendor=NVIDIA --gpu-driver-version=23.21.13.8813 --gpu-driver-date=10-27-2017 --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --service-request-channel-token=C8D34E5F62F6324139BCA85079969C5F --mojo-platform-channel-handle=1768 /prefetch:2
+- 07:47:44.078 DEBUG: ClientHandler::OnAfterCreated()
+- 07:47:44.078 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 07:47:44.094 DEBUG: OnLoadingStateChange: loading=1, url=
+- 07:47:44.000 DEBUG: Command line string for the renderer process: "F:\PROJETOS MARACAIPE\Integrador-eCommerce\integrador.exe" --type=renderer --no-sandbox --primordial-pipe-token=3D9E040D2212B25203781D2867D80C55 --lang=en-US --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=3D9E040D2212B25203781D2867D80C55 --renderer-client-id=3 --mojo-platform-channel-handle=2400 /prefetch:1
+- 07:47:44.016 DEBUG: OnBrowserCreated()
+[1122/074744.483:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 07:47:45.609 INFO: GET 200 /vendor/fontawesome-free/css/all.min.css
+- 07:47:45.609 INFO: GET 200 /css/sb-admin-2.min.css
+- 07:47:45.609 INFO: GET 200 /
+- 07:47:45.484 DEBUG: OnContextCreated()
+- 07:47:45.656 INFO: GET 200 /js/sb-admin-2.min.js
+- 07:47:45.656 INFO: GET 200 /vendor/bootstrap/js/bootstrap.bundle.min.js
+- 07:47:45.656 INFO: GET 200 /js/demo/chart-area-demo.js
+- 07:47:45.656 INFO: GET 200 /vendor/chart.js/Chart.min.js
+- 07:47:45.672 INFO: GET 200 /js/demo/chart-pie-demo.js
+- 07:47:46.875 INFO: GET 404 /vendor/jquery/jquery.min.js
+- 07:47:46.875 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/074746.203:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:56846/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/074746.371:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:56846/js/sb-admin-2.min.js (7)
+- 07:47:46.047 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/074746.403:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56846/vendor/chart.js/Chart.min.js (7)
+[1122/074746.403:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:56846/vendor/chart.js/Chart.min.js (7)
+- 07:47:46.078 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:56846/
+- 08:29:52.906 DEBUG: WM_DESTROY
+- 08:29:52.906 DEBUG: RemoveBrowserWindow(): hwnd = 10421790
+- 08:29:52.906 INFO: Stopping Mongoose web server
+- 08:29:52.906 DEBUG: Mongoose webserver stopped immediately
+- 08:29:52.906 DEBUG: OnBeforeClose() hwnd=217385626
+- 08:29:52.906 DEBUG: RemoveBrowserWindow(): hwnd = 217385626
+- 08:29:52.906 DEBUG: GetBrowserWindow(): not found, hwnd = 217385626
+- 08:29:52.906 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 08:29:52.906 DEBUG: Calling CefQuitMessageLoop()
+- 08:29:52.781 DEBUG: OnBrowserDestroyed()
+- 08:29:52.969 INFO: Ended application
+- 08:29:52.969 INFO: --------------------------------------------------------
+- 12:01:21.015 INFO: --------------------------------------------------------
+- 12:01:21.047 INFO: Started application
+- 12:01:21.047 INFO: Logging to: F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log
+- 12:01:21.047 INFO: Log level = DEBUG4
+- 12:01:21.047 INFO: Starting Mongoose 3.9c web server
+- 12:01:21.047 INFO: WWW directory: F:\PROJETOS MARACAIPE\Integrador-eCommerce\prestashop\public
+- 12:01:21.047 INFO: Index files: index.php
+- 12:01:21.047 INFO: CGI interpreter: F:\PROJETOS MARACAIPE\Integrador-eCommerce\php\php-cgi.exe
+- 12:01:21.047 INFO: CGI pattern: **.php$
+- 12:01:21.047 INFO: Hide files patterns: 
+- 12:01:21.047 DEBUG: The temp directory returned by OS contains unicode characters: C:\Users\WANDER~1\AppData\Local\Temp\
+- 12:01:21.047 INFO: CGI environment variables set: TMP=C:\Windows\Temp,TEMP=C:\Windows\Temp,TMPDIR=C:\Windows\Temp,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 12:01:21.047 INFO: Web server url: http://127.0.0.1:62689/
+- 12:01:21.047 INFO: remote_debugging_port = 61473
+- 12:01:21.047 DEBUG: Command line string for the browser process: "F:\PROJETOS MARACAIPE\Integrador-eCommerce\integrador.exe" --no-sandbox --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --remote-debugging-port=61473
+- 12:01:23.328 DEBUG: App::OnContextInitialized()
+- 12:01:23.328 DEBUG: Window max width/height = 1840/992
+- 12:01:23.328 DEBUG: GetBrowserWindow(): not found, hwnd = 1311816
+- 12:01:23.328 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 12:01:23.328 DEBUG: BrowserWindow::CreateBrowserControl()
+- 12:01:23.328 DEBUG: StoreBrowserWindow(): hwnd = 1311816
+- 12:01:23.359 DEBUG: ClientHandler::OnAfterCreated()
+- 12:01:23.359 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 12:01:23.375 DEBUG: OnLoadingStateChange: loading=1, url=
+- 12:01:24.000 DEBUG: Command line string for the renderer process: "F:\PROJETOS MARACAIPE\Integrador-eCommerce\integrador.exe" --type=renderer --no-sandbox --primordial-pipe-token=D05E8494B93A08346642E38BDEDA9D0B --lang=en-US --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=D05E8494B93A08346642E38BDEDA9D0B --renderer-client-id=3 --mojo-platform-channel-handle=2304 /prefetch:1
+- 12:01:24.015 DEBUG: OnBrowserCreated()
+- 12:01:24.000 DEBUG: Command line string for the gpu-process process: "F:\PROJETOS MARACAIPE\Integrador-eCommerce\integrador.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x10de --gpu-device-id=0x1244 --gpu-driver-vendor=NVIDIA --gpu-driver-version=23.21.13.8813 --gpu-driver-date=10-27-2017 --lang=en-US --log-file="F:\PROJETOS MARACAIPE\Integrador-eCommerce\debug.log" --service-request-channel-token=C9B89224CDA0EDD26940FDF4E9C269BA --mojo-platform-channel-handle=1808 /prefetch:2
+[1122/120129.106:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 12:01:38.015 INFO: GET 200 /
+- 12:01:38.031 INFO: GET 200 /vendor/fontawesome-free/css/all.min.css
+- 12:01:38.031 INFO: GET 200 /css/sb-admin-2.min.css
+- 12:01:38.734 DEBUG: OnContextCreated()
+- 12:01:38.031 INFO: GET 200 /js/sb-admin-2.min.js
+- 12:01:38.047 INFO: GET 200 /js/demo/chart-area-demo.js
+- 12:01:38.062 INFO: GET 200 /vendor/bootstrap/js/bootstrap.bundle.min.js
+- 12:01:38.078 INFO: GET 200 /js/demo/chart-pie-demo.js
+- 12:01:38.078 INFO: GET 200 /vendor/chart.js/Chart.min.js
+- 12:01:38.844 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+- 12:01:38.844 INFO: GET 404 /vendor/jquery/jquery.min.js
+[1122/120138.975:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:62689/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/120139.144:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:62689/js/sb-admin-2.min.js (7)
+- 12:01:39.031 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/120139.176:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:62689/vendor/chart.js/Chart.min.js (7)
+[1122/120139.176:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:62689/vendor/chart.js/Chart.min.js (7)
+- 12:01:39.062 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:62689/
+- 12:12:54.172 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:62689/
+- 12:12:54.422 DEBUG: OnContextCreated()
+- 12:12:55.234 INFO: GET 200 /sincronizar
+- 12:12:55.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:62689/sincronizar
+- 12:12:57.390 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:62689/sincronizar
+- 12:12:57.093 DEBUG: OnContextCreated()
+- 12:12:57.640 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+- 12:12:57.640 INFO: GET 404 /vendor/jquery/jquery.min.js
+[1122/121257.761:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:62689/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/121257.762:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:62689/js/sb-admin-2.min.js (7)
+[1122/121257.794:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:62689/vendor/chart.js/Chart.min.js (7)
+[1122/121257.795:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:62689/vendor/chart.js/Chart.min.js (7)
+- 12:12:57.672 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:62689/
+- 12:12:58.734 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:62689/
+- 12:12:59.734 DEBUG: OnContextCreated()
+- 12:12:59.547 INFO: GET 200 /sincronizar
+- 12:12:59.547 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:62689/sincronizar
+- 12:13:01.469 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:62689/sincronizar
+- 12:13:01.172 DEBUG: OnContextCreated()
+[1122/121301.775:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:62689/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/121301.776:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:62689/js/sb-admin-2.min.js (7)
+- 12:13:01.656 INFO: GET 404 /vendor/jquery/jquery.min.js
+[1122/121301.782:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:62689/vendor/chart.js/Chart.min.js (7)
+[1122/121301.782:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:62689/vendor/chart.js/Chart.min.js (7)
+- 12:13:01.672 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:62689/
+- 12:13:04.484 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:62689/
+- 12:13:04.422 DEBUG: OnContextCreated()
+- 12:13:04.734 INFO: GET 200 /
+- 12:13:04.734 INFO: GET 200 /vendor/fontawesome-free/css/all.min.css
+- 12:13:04.734 INFO: GET 200 /css/sb-admin-2.min.css
+- 12:13:04.765 INFO: GET 200 /vendor/bootstrap/js/bootstrap.bundle.min.js
+- 12:13:04.765 INFO: GET 200 /js/sb-admin-2.min.js
+- 12:13:04.765 INFO: GET 200 /vendor/chart.js/Chart.min.js
+- 12:13:04.765 INFO: GET 200 /js/demo/chart-area-demo.js
+- 12:13:04.765 INFO: GET 200 /js/demo/chart-pie-demo.js
+- 12:13:05.969 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/121305.096:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:62689/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+- 12:13:05.984 INFO: GET 404 /vendor/jquery/jquery.min.js
+[1122/121305.291:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:62689/js/sb-admin-2.min.js (7)
+- 12:13:05.172 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/121305.298:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:62689/vendor/chart.js/Chart.min.js (7)
+[1122/121305.298:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:62689/vendor/chart.js/Chart.min.js (7)
+- 12:13:05.187 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:62689/
+- 12:13:08.640 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:62689/
+- 12:13:09.640 DEBUG: OnContextCreated()
+- 12:13:09.437 INFO: GET 200 /sincronizar
+- 12:13:09.437 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:62689/sincronizar
+- 12:13:11.125 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:62689/sincronizar
+- 12:13:11.828 DEBUG: OnContextCreated()
+- 12:13:11.344 INFO: GET 404 /vendor/jquery/jquery.min.js
+- 12:13:11.344 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/121311.470:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'fn' of undefined", source: http://127.0.0.1:62689/vendor/bootstrap/js/bootstrap.bundle.min.js (6)
+[1122/121311.653:INFO:CONSOLE(7)] "Uncaught ReferenceError: jQuery is not defined", source: http://127.0.0.1:62689/js/sb-admin-2.min.js (7)
+- 12:13:11.531 INFO: GET 404 /vendor/jquery-easing/jquery.easing.min.js
+[1122/121311.683:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:62689/vendor/chart.js/Chart.min.js (7)
+[1122/121311.684:INFO:CONSOLE(7)] "Uncaught TypeError: Cannot read property 'length' of null", source: http://127.0.0.1:62689/vendor/chart.js/Chart.min.js (7)
+- 12:13:11.562 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:62689/
+- 12:29:18.453 DEBUG: WM_DESTROY
+- 12:29:18.453 DEBUG: RemoveBrowserWindow(): hwnd = 1311816
+- 12:29:18.453 INFO: Stopping Mongoose web server
+- 12:29:18.453 DEBUG: Mongoose webserver stopped immediately
+- 12:29:18.469 DEBUG: OnBeforeClose() hwnd=918580
+- 12:29:18.469 DEBUG: RemoveBrowserWindow(): hwnd = 918580
+- 12:29:18.469 DEBUG: GetBrowserWindow(): not found, hwnd = 918580
+- 12:29:18.469 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 12:29:18.469 DEBUG: Calling CefQuitMessageLoop()
+- 12:29:18.234 DEBUG: OnBrowserDestroyed()
+- 12:29:18.547 INFO: Ended application
+- 12:29:18.547 INFO: --------------------------------------------------------

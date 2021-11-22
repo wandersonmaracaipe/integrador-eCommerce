@@ -40,8 +40,10 @@ class SincronizarController extends Controller
                 # Envia o cadastro do grupo de produto para o prestashop para referenciar ao produto
                 $grupoProdIdPrestashop = $this->grupo->addUpdateGrupoProdutoPrestashop($produto->proGrupo);
 
+                $subGrupoProdIdPrestashop = $this->grupo->addUpdateSubGrupoProdutoPrestashop($produto->proSubGrupo);
+
                 # Envia o cadastro do produto para o prestashop
-                $xmlProdPrestashop = $this->produto->sincronizarProdudo($produto, $grupoProdIdPrestashop);
+                $xmlProdPrestashop = $this->produto->sincronizarProdudo($produto, $grupoProdIdPrestashop, $subGrupoProdIdPrestashop);
 
                 # Atualiza o estoque atual do produto no prestashop
                 $this->produto->atualizaEstoque($xmlProdPrestashop, $produto);
