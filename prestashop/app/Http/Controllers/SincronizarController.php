@@ -32,39 +32,41 @@ class SincronizarController extends Controller
 
         # Percorrendo o array de produtos
         foreach ($produtos as $produto) {
+            # Verifica se valor do produto é maior que zero antes de sincronizar o mesmo.
+            if ($produto->proVenda > 0) {
+                # Pesquisa o produto no prestashop
+                $pesquisaProduto = $this->produto->pesquisaProdutoPrestashop($produto);
 
-            # Pesquisa o produto no prestashop
-            $pesquisaProduto = $this->produto->pesquisaProdutoPrestashop($produto);
+                # Se count() igual a zero, cadastra o produto
+                if ($pesquisaProduto->count() == 0) {
 
-            # Se count() igual a zero, cadastra o produto
-            if($pesquisaProduto->count() == 0){
+                    # Se produto estiver vinculado em um grupo, enviamos o cadastro
+                    if (!empty($produto->proSubGrupo)) {
+                        # Envia o cadastro do grupo de produto para o prestashop para referenciar ao produto
+                        $grupoPrestashop = $this->grupo->addUpdateGrupoProdutoPrestashop($produto->proGrupo);
+                    }
 
-                # Se produto estiver vinculado em um grupo, enviamos o cadastro
-                if(!empty($produto->proSubGrupo)){
-                    # Envia o cadastro do grupo de produto para o prestashop para referenciar ao produto
-                    $grupoPrestashop = $this->grupo->addUpdateGrupoProdutoPrestashop($produto->proGrupo);
+                    # Se produto estiver vinculado em um subgrupo de produto, enviamos o cadastro
+                    if (!empty($produto->proSubGrupo)) {
+                        # Envia o cadastro do subgrup de produto para o prestashop e referencia o subgrupo ao grupo (idParent)
+                        $subgrupoPrestashop = $this->subgrupo->addUpdateSubGrupoProdutoPrestashop($produto->proSubGrupo, $grupoPrestashop->id);
+                    }
+
+                    # Envia o cadastro do produto para o prestashop
+                    $xmlProdPrestashop = $this->produto->sincronizarProdudo($produto, $grupoPrestashop, $subgrupoPrestashop);
+
+                    # Atualiza o estoque atual do produto no prestashop
+                    $this->produto->atualizaEstoque($xmlProdPrestashop, $produto);
+
+                } else {
+
+                    # Atualiza Dados do produto no prestashop
+                    $this->produto->atualizaDadosProduto($pesquisaProduto, $produto);
+
+                    # Atualiza o estoque atual do produto no prestashop
+                    $this->produto->atualizaEstoque($pesquisaProduto, $produto);
+
                 }
-
-                # Se produto estiver vinculado em um subgrupo de produto, enviamos o cadastro
-                if(!empty($produto->proSubGrupo)){
-                    # Envia o cadastro do subgrup de produto para o prestashop e referencia o subgrupo ao grupo (idParent)
-                    $subgrupoPrestashop = $this->subgrupo->addUpdateSubGrupoProdutoPrestashop($produto->proSubGrupo, $grupoPrestashop->id);
-                }
-
-                # Envia o cadastro do produto para o prestashop
-                $xmlProdPrestashop = $this->produto->sincronizarProdudo($produto, $grupoPrestashop, $subgrupoPrestashop);
-
-                # Atualiza o estoque atual do produto no prestashop
-                $this->produto->atualizaEstoque($xmlProdPrestashop, $produto);
-
-            } else{
-
-                # Atualiza Dados do produto no prestashop
-                $this->produto->atualizaDadosProduto($pesquisaProduto, $produto);
-
-                # Atualiza o estoque atual do produto no prestashop
-                $this->produto->atualizaEstoque($pesquisaProduto, $produto);
-
             }
 
         }
@@ -72,7 +74,7 @@ class SincronizarController extends Controller
         # dump and die
         # dd($produtos);
 
-       return redirect()->route('dashboard');
+        return redirect()->route('dashboard');
 
     }
 }

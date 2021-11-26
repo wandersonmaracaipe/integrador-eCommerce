@@ -28,7 +28,7 @@ class Produto extends Model
     public function pesquisaProdutoPrestashop($produto)
     {
         try {
-            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
 
             # Referencia/ SKU do produto
             if (!empty($produto->proCodigoSKU)) {
@@ -53,12 +53,14 @@ class Produto extends Model
     # Sincronizando produdo maxdata para o prestashop
     public function sincronizarProdudo($produto, $grupo, $subgrupo)
     {
+
+
         try { # Conectando ao prestashop
-            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
             $xml = $webService->get(array('url' => env('PRESTASHOP_URL') . '/api/products?schema=blank'));
 
             # Montando XML de cadastro do produto
-            $product = $xml->children()->children();
+            $product = $xml->product->children();
 
             # Descrição do produto
             $product->name->language[0][0] = $produto->proDescricao;
@@ -76,8 +78,8 @@ class Produto extends Model
             $product->description_short->language[0][0]['xlink:href'] = env('PRESTASHOP_URL') . '/api/languages/' . 1;
 
             # Preço de venda do produto
-            $product->price = $produto->proVenda;
-            $product->wholesale_price = $produto->proVenda;
+            $product->price = (float) $produto->proVenda;
+            $product->wholesale_price = (float) $produto->proVenda;
 
             # Referencia/ SKU do produto
             if (!empty($produto->proCodigoSKU)) {
@@ -95,10 +97,10 @@ class Produto extends Model
             $product->available_for_order = 1;
             $product->unit_price_ratio = 10;
             $product->depends_on_stock = 0;
-            $product->width = $produto->proLargura;
-            $product->height = $produto->proAltura;
-            $product->depth = $produto->proComprimento;
-            $product->weight = $produto->proPeso;
+            $product->width = (float) $produto->proLargura;
+            $product->height = (float) $produto->proAltura;
+            $product->depth = (float) $produto->proComprimento;
+            $product->weight = (float) $produto->proPeso;
 
             # Grupo diferente de NULL
             if ($grupo != NULL) {
@@ -130,7 +132,7 @@ class Produto extends Model
     {
         try {
             # Conectando ao prestashop
-            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
 
             $xml = $webService->get([
                 'resource' => 'products',
@@ -155,16 +157,16 @@ class Produto extends Model
             $product->description_short->language[0][0] = $produto->proDescPdv;
 
             # Preço de venda do produto
-            $product->price = $produto->proVenda;
-            $product->wholesale_price = $produto->proVenda;
-            $product->width = $produto->proLargura;
-            $product->height = $produto->proAltura;
-            $product->depth = $produto->proComprimento;
-            $product->weight = $produto->proPeso;
+            $product->price = (float) $produto->proVenda;
+            $product->wholesale_price = (float) $produto->proVenda;
+            $product->width = (float) $produto->proLargura;
+            $product->height = (float) $produto->proAltura;
+            $product->depth = (float) $produto->proComprimento;
+            $product->weight = (float) $produto->proPeso;
 
             $updatedXml = $webService->edit([
                 'resource' => 'products',
-                'id' => (int)$product->id,
+                'id' => (int) $product->id,
                 'putXml' => $xml->asXML(),
             ]);
 
