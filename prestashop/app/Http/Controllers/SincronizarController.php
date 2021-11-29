@@ -33,7 +33,7 @@ class SincronizarController extends Controller
         # Percorrendo o array de produtos
         foreach ($produtos as $produto) {
             # Verifica se valor do produto é maior que zero antes de sincronizar o mesmo.
-            if ($produto->proVenda > 0) {
+            if ($produto->proVenda > 0 && !empty($produto->proGrupo)) {
                 # Pesquisa o produto no prestashop
                 $pesquisaProduto = $this->produto->pesquisaProdutoPrestashop($produto);
 
@@ -74,7 +74,10 @@ class SincronizarController extends Controller
         # dump and die
         # dd($produtos);
 
-        return redirect()->route('dashboard');
+        $produto['success'] = true;
+        echo json_encode($produto);
+
+        return;
 
     }
 }

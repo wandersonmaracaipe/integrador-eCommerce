@@ -18,6 +18,9 @@ class Produto extends Model
     public function getProdutosMaxdata()
     {
         $produtos = self::where('proUsaEcommerce', 1)
+            ->where('proEstoqueAtual', '>', 0)
+            ->where('proGrupo', '>', 0)
+            ->where('proVenda', '>', 0)
             ->where('empId', 2)
             ->get();
 
@@ -28,7 +31,7 @@ class Produto extends Model
     public function pesquisaProdutoPrestashop($produto)
     {
         try {
-            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
 
             # Referencia/ SKU do produto
             if (!empty($produto->proCodigoSKU)) {
@@ -56,7 +59,7 @@ class Produto extends Model
 
 
         try { # Conectando ao prestashop
-            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
             $xml = $webService->get(array('url' => env('PRESTASHOP_URL') . '/api/products?schema=blank'));
 
             # Montando XML de cadastro do produto
@@ -132,7 +135,7 @@ class Produto extends Model
     {
         try {
             # Conectando ao prestashop
-            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
 
             $xml = $webService->get([
                 'resource' => 'products',

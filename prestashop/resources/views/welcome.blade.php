@@ -4,7 +4,13 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Dashboard e-Commerce </h1>
         <span id="time"></span>
-        <a href="{{ route('sincronizar') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"> Sincronizar</a>
+
+        <form name="formSincronizar">
+            <button type="submit" onclick="sincronizar()" id="btnSincronizar"
+                    class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"> Sincronizar
+            </button>
+        </form>
+
     </div>
 
     <!-- Content Row -->
@@ -39,4 +45,40 @@
         </div>
 
     </div>
+
+@section('script')
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
+
+    <script type="text/javascript">
+
+        $('form[name="formSincronizar"]').submit(function (event) {
+            event.preventDefault();
+
+            var element = document.getElementById('btnSincronizar');
+            document.getElementById("btnSincronizar").disabled = true;
+            element.innerHTML= '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sincronizando';
+
+            var _token = $('meta[name="_token"]').attr('content');
+
+            $.ajaxSetup({ headers: {'X-CSRF-TOKEN': _token} });
+
+            $.ajax({
+                url: "{{ route('sincronizar') }}",
+                type: "POST",
+                data: {},
+                dataType: "JSON",
+                success: function (response) {
+                    if(response.success === true){
+                        var element = document.getElementById('btnSincronizar');
+                        element.innerHTML= ' Sincronizar';
+                        document.getElementById("btnSincronizar").disabled = false;
+                        document.location.reload(true);
+                    }
+                }
+            });
+
+        });
+    </script>
+@stop
 @endsection
