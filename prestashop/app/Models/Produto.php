@@ -21,9 +21,9 @@ class Produto extends Model
             ->where('proEstoqueAtual', '>', 0)
             ->where('proGrupo', '>', 0)
             ->where('proVenda', '>', 0)
+            ->where('proDesativaProd', 0)
             ->where('empId', 2)
             ->get();
-
         return $produtos;
     }
 

@@ -27,6 +27,7 @@ class SincronizarController extends Controller
         $grupoPrestashop = null;
         $subgrupoPrestashop = null;
 
+
         # Select na tabela produtos para buscar todos os produtos marcados para usar ecommerce
         $produtos = $this->produto->getProdutosMaxdata();
 
@@ -41,13 +42,13 @@ class SincronizarController extends Controller
                 if ($pesquisaProduto->count() == 0) {
 
                     # Se produto estiver vinculado em um grupo, enviamos o cadastro
-                    if (!empty($produto->proSubGrupo)) {
+                    if (!empty($produto->proGrupo)) {
                         # Envia o cadastro do grupo de produto para o prestashop para referenciar ao produto
                         $grupoPrestashop = $this->grupo->addUpdateGrupoProdutoPrestashop($produto->proGrupo);
                     }
 
                     # Se produto estiver vinculado em um subgrupo de produto, enviamos o cadastro
-                    if (!empty($produto->proSubGrupo)) {
+                    if ($produto->proSubGrupo != null) {
                         # Envia o cadastro do subgrup de produto para o prestashop e referencia o subgrupo ao grupo (idParent)
                         $subgrupoPrestashop = $this->subgrupo->addUpdateSubGrupoProdutoPrestashop($produto->proSubGrupo, $grupoPrestashop->id);
                     }
@@ -58,7 +59,7 @@ class SincronizarController extends Controller
                     # Atualiza o estoque atual do produto no prestashop
                     $this->produto->atualizaEstoque($xmlProdPrestashop, $produto);
 
-                } else {
+                } else { # Caso contrario, atualiza o estoque do produto.
 
                     # Atualiza Dados do produto no prestashop
                     $this->produto->atualizaDadosProduto($pesquisaProduto, $produto);
@@ -74,8 +75,10 @@ class SincronizarController extends Controller
         # dump and die
         # dd($produtos);
 
-        $produto['success'] = true;
-        echo json_encode($produto);
+        //$produto['success'] = true;
+        $retorno['success'] = true;
+
+        echo json_encode($retorno);
 
         return;
 

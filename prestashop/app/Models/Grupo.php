@@ -33,7 +33,7 @@ class Grupo extends Model
     public function pesquisaGrupoPrestashop($gdpNome)
     {
         try {
-            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), false);
+            $webService = new PrestaShopWebservice(env('PRESTASHOP_URL'), env('PRESTASHOP_KEY'), true);
 
             $xml = $webService->get([
                 'resource' => 'categories',

@@ -19,10 +19,25 @@ class DashboardController extends Controller
     public function index()
     {
 
-        $countProdutos = $this->produto->produtosPrestashopIds()->count();
-        $countVendas = $this->produto->vendasPrestashopIds()->count();
+        return view('welcome');
 
-        return view('welcome', compact('countProdutos', $countProdutos, 'countVendas', $countVendas));
+    }
 
+    public function countProduto()
+    {
+        $countProdutos['contador'] = $this->produto->produtosPrestashopIds()->count();
+
+        $countProdutos['success'] = true;
+
+        echo json_encode($countProdutos);
+    }
+
+    public function countVenda()
+    {
+        $countVendas['contador'] = $this->produto->vendasPrestashopIds()->count();
+
+        $countVendas['success'] = true;
+
+        echo json_encode($countVendas);
     }
 }
